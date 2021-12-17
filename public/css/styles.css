@@ -1,0 +1,300 @@
+/*NORMALIZACION-------------------------------------------------------------------------------------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --Amarillo: #EAC926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Gris-oscuro: #666;
+    --Gris-claro: #ebebeb;
+    --Verde: #39b54a;
+    --Gris-oscuro2: rgb(143, 143, 143);
+}
+body{
+    font-family: 'roboto', sans-serif;
+    background-color: var(--Gris-claro);
+}
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+}
+
+/*HEADER-------------------------------------------------------------------------------------------*/
+header{
+    background-color: var(--Amarillo);
+}
+div.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+header div.top-header p{
+    text-align: center;
+    margin-top: 10px;
+}
+header .form .input{
+    background: var(--Gris-claro);
+    outline: none;
+    color: var(--Gris-oscuro);
+    padding: 2px;
+    height: 70%;
+}
+header .form .submit{
+    background-color: var(--Gris-claro);
+    color: var(--Gris-oscuro);
+    height: 70%;
+    width: 10%;
+}
+.submit, .input{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.input{
+    border-radius: 9px 0px 0px 9px;
+    border:1px solid var(--Gris-oscuro2);
+    border-right: none;
+}
+.submit{
+    border-radius: 0px 9px 9px 0px;
+    border:1px solid var(--Gris-oscuro2);
+    border-left: none;
+}
+.logo, .form{
+    width: 50%;
+}
+.logo{
+    padding: 10px;
+}
+
+.form{
+    display: flex;  
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+    border-radius: 5px;
+}
+header nav {
+    font-size: 12px;
+}
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: black;
+}
+nav{
+    display: none;
+    
+}
+
+
+/*MENU BURGUER-------------------------------------------------------------------------------------------*/
+.burger-menu{
+    text-align: center;
+}
+.burger-menu i{
+    background-color: var(--Celeste);
+    color:white;
+    font-size: 20px;
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    margin: 10px 0px 20px 0px;
+}
+/*BANNER-------------------------------------------------------------------------------------------*/
+section.banner img{
+    width: 100%;
+}
+/*MAIN-------------------------------------------------------------------------------------------*/
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+main section article{
+    background-color: white;    
+    margin: 10px 0px;
+}
+main section article img{
+    width: 100%;
+}
+.last-visit, .offers{
+    display: flex;
+    flex-wrap: wrap;
+}
+.price{
+    font-size: 18px;
+    width: 40%;
+}
+.discount{
+    width: 60%;
+}
+.discount, .description{
+    font-size: 16px;
+    font-weight: normal;
+}
+h3, .description{
+    color: var(--Gris-oscuro);
+}
+main section article i, .discount{
+    color: var(--Verde);
+}
+main section h3{
+    margin: 20px 0px;
+}
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--Verde);
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top:-15px
+}
+.main-article{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border-top: 3px solid var(--Gris-claro);
+    padding: 15px;
+}
+/*ANIMATIONS*/
+.main-article i{
+    transition: transform 1s;
+}
+.main-article h4{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.products article:hover{
+    transition: 0.8s;
+    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+}
+.products article:hover i{
+    transform: rotate(-90deg);
+    color: rgb(0, 111, 13);
+}
+.products article:hover h4{
+    visibility: visible;
+    opacity: 1;
+}
+.footer div:hover i{
+    color: var(--Azul);
+    font-size: 30px;
+}
+
+/*FOOTER*-------------------------------------------------------------------------------------------*/
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+.footer i{
+    color: var(--Celeste);
+    margin: 10px 0px;
+    font-size: 25px; 
+    transition: color 1s, font-size 0.3s;
+}
+.footer h3{
+    font-size: 15px;
+}
+.footer p{
+    color: rgb(148, 148, 148);
+    font-size: 11px;
+}
+.footer article{
+    width: 200px;
+}
+.copy{
+    background-color: white;
+    padding: 10px;
+    color: rgb(148, 148, 148);
+}
+/*MEDIA QUERYS (min-width(APARTI DE Npx) se aplica el Query)-------------------------------------------------------------------------------------------*/
+@media (min-width: 361px){
+
+    .products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .products article{
+        width: 45%;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px 20px;
+    }
+    nav ul li{
+        display: inline;
+    }
+    nav ul{
+        margin-bottom:20px;
+    }
+    .burger-menu{
+        display: none;
+    }
+    header .form .input{
+        height: 30px;
+        margin-right: 5px;
+        border-radius: 9px 9px 9px 9px;
+        border:1px solid var(--Gris-oscuro2);
+    }
+    header .form .submit{
+        height: 30px;
+        border:1px solid var(--Gris-oscuro2);
+        border-radius: 9px 9px 9px 9px;
+    }
+    .form{
+        max-width: 200px;
+    }
+    div.top-header{
+        align-items: center;
+        padding: 0px;
+        margin: 0px 10px;
+    }
+    .logo{
+        max-width: 150px;
+    }
+    header div.top-header p{
+        margin-top: 0px;
+    }
+}
+@media (min-width: 769px){
+    .products article{
+        width: 22%;
+    }
+    .logo{
+        max-width: 250px;
+    }
+    .footer{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .footer article{
+        width: 300px;
+    }
+
+}
