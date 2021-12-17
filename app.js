@@ -12,4 +12,6 @@ app.get("/login", (req, res)=> res.sendFile(path.join(__dirname, "./views/login.
 
 // app.listen(3000, () => console.log("Servidor corriendo en el puerto 3000"));
 
-app.listen(PORT, () => console.log("Servidor corriendo en el puerto ${PORT}"));
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
