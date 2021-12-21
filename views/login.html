@@ -11,17 +11,24 @@
     <body>
         <header>
             <div class="top-header">
-                <div class="logo"><a href="/">
-                    <img src="images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
-                </a>
+                <div class="logo"> 
+                    <a class="logo1" href="/">
+                        <img  src="/images/logo1.png" alt="Logo de MercadoLiebre">
+                    </a>
+                    <a class="logo2" href="/">
+                        <img src="/images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
+                    </a>
                 </div>
                 <div class="form" action="#" method="GET">
-                    <div class="input">
-                        <input type="text" name="user" placeholder="Buscar productos, marcas y más">
-                    </div>
-                    <div class="submit"><i class="fa fa-search"></i></div>
+                    <input type="text" name="search" placeholder="Buscar productos, marcas y más">
+                    <div class="submit-search"><i class="fa fa-search"></i></div>
                 </div>
                 <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+                <div class="burger-menu-padre">
+                    <button class="burger-menu">
+                        <i class="fa fa-bars burger"></i>
+                    </button>
+                </div>
             </div>
             <nav>
                 <ul class="ul1">
@@ -36,17 +43,15 @@
                     <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
                 </ul>
             </nav>
-            <div class="burger-menu">
-                <i class="fa fa-bars burger"></i>
-            </div>
         </header>
+
         <main>
             <div  class="login">
                 <h2>Ingresa tu cuenta.</h2>
                 <form action="/" method="POST">
                     <input type="text" name="user" placeholder="Nombre de usuario">
                     <input type="password" name="pass" placeholder="Elegí tu contraseña">
-                    <input class="enviarlogin" type="submit" value="Enviar">
+                    <input class="enviarlogin" type="submit" value="Ingresar">
                 </form>
             </div>
         </main>

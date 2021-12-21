@@ -15,95 +15,91 @@
 body{
     font-family: 'roboto', sans-serif;
 }
-/*HEADER-------------------------------------------------------------------------------------------------------------------*/
+/*HEADER-------------------------------------------------------------------------------------------*/
+
 header{
     background-color: var(--Amarillo);
-}
-div.top-header{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 5%;
-}
-header div.top-header p{
-    text-align: center;
-    margin-top: 10px;
-}
-header .form .input{
-    background: var(--Gris-claro);
-    outline: none;
-    color: var(--Gris-oscuro);
-    padding: 2px;
-    height: 70%;
-}
-header .form .submit{
-    background-color: var(--Gris-claro);
-    color: var(--Gris-oscuro);
-    height: 70%;
-    width: 10%;
-}
-.submit, .input{
-    display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-}
-.input{
-    border-radius: 9px 0px 0px 9px;
-    border:1px solid var(--Gris-oscuro2);
-    border-right: none;
-}
-.submit{
-    border-radius: 0px 9px 9px 0px;
-    border:1px solid var(--Gris-oscuro2);
-    border-left: none;
-}
-.logo, .form{
-    width: 50%;
-}
-.logo{
-    padding: 10px;
-}
-
-.form{
-    display: flex;  
-    align-items: center;
-    padding: 2px;
-    font-size: 11px;
-    border-radius: 5px;
-}
-header nav {
-    font-size: 12px;
-}
-header ul li{
-    list-style-type: none;
-}
-
-header ul li a{
-    text-decoration: none;
-    color: black;
-}
-nav{
-    display: none;
-}
-.input input{
-    border:none;
-    background-color: var(--Gris-claro);
     width: 100%;
 }
-/*MENU BURGUER-------------------------------------------------------------------------------------------*/
-.burger-menu{
-    text-align: center;
-}
-.burger-menu i{
-    background-color: var(--Celeste);
-    color:white;
-    font-size: 20px;
-    border-radius: 5px;
-    height: 40px;
-    width: 40px;
+.top-header{
+    width: 100%;
+    max-width: 1100px;
     padding: 10px;
-    margin: 10px 0px 20px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
+.logo2{
+    display: none;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+.logo img{
+    height: 50px;
+    width: 70px;
+}
+.form input{
+    padding: 5px;
+    height: 40px;
+    width: 90%;
+    background-color: white;
+    color: var(--Gris-oscuro);
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+}
+.form{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 75%;
+    margin-left: 4px;
+}
+.submit-search{
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: white;
+    color: var(--Gris-oscuro);
+    border-radius: 0px 10px 10px 0px;
+}
+.fas{
+    margin: 10px 0px;
+}
+body header nav{
+    display: none;
+}
+body header nav ul, li a {
+    color: black;
+    text-decoration: none;
+    list-style: none;
+}
+/*BURGER-MENU-----------------------------------------------------------------------------------------------*/
+.burger-menu{
+    border-color: rgb(141, 141, 141);
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 20px;
+    background-color: var(--Celeste);
+    color: white;
+    margin-bottom: 10px;
+}
+.burger-menu-padre{
+    text-align: center;
+    width: 100%;
+}
+
 /*main----------------------------------------------------------------------------------------------------------------------*/
 body{
     font-family: 'Roboto', sans-serif;
@@ -239,66 +235,27 @@ body main form{
     color: var(--Azul);
     font-size: 30px;
 }
+.copy{
+    font-size: 12px;
+}
 
 
 /*Querys----------------------------------------------------------------------------------------------------------------------*/
-@media (min-width: 361px){
-    body main form{
-        padding: 40px;
-    }
-    nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 0px 20px;
-    }
-    nav ul li{
-        display: inline;
-    }
-    nav ul{
-        margin-bottom:20px;
-    }
-    .burger-menu{
+@media (min-width:600px) {
+    .logo1{
         display: none;
     }
-    header .form .input{
-        height: 30px;
-        margin-right: 5px;
-        border-radius: 9px 9px 9px 9px;
-        border:1px solid var(--Gris-oscuro2);
-    }
-    header .form .submit{
-        height: 30px;
-        border:1px solid var(--Gris-oscuro2);
-        border-radius: 9px 9px 9px 9px;
-    }
-    .form{
-        max-width: 200px;
-    }
-    div.top-header{
-        align-items: center;
-        padding: 0px;
-        margin: 0px 10px;
-    }
-    .logo{
-        max-width: 150px;
-    }
-    header div.top-header p{
-        margin-top: 0px;
-    }
-    div.top-header{
-        justify-content: center;
-        padding: 0px;
-        margin: 0px;
-    }
-    body header div.top-header{
+    .logo2{
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+    }
+    .logo2 img{
         width: 100%;
     }
+    .copy{
+        font-size: 10px;
+    }
 }
-@media (min-width: 769px){
+@media (min-width: 750px){
     .products article{
         width: 22%;
     }
@@ -306,6 +263,8 @@ body main form{
         max-width: 250px;
     }
     .footer{
+        display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
     }
@@ -323,6 +282,37 @@ body main form{
     }
     .form{
         width: 30%;
+    }
+    .copy{
+        font-size: 10px;
+    }
+    .burger-menu-padre{
+        display: none;
+    }
+    body header nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 1100px;
+    }
+    body header nav ul li{
+        display: inline;
+    }
+    body header nav ul li a{
+        margin: 0px 10px;
+        font-size: 15px;
+        color: rgb(71, 71, 71);
+    }
+    body header nav ul li a:hover{
+        color: black;
+    }
+    .form{
+        width: 35%;
+    }
+    .top-header{
+        justify-content: space-between;
     }
 
 }
