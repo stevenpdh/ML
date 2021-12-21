@@ -1,0 +1,260 @@
+/*NORMALIZACION-------------------------------------------------------------------------------------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --Amarillo: #EAC926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Gris-oscuro: #666;
+    --Gris-claro: #ebebeb;
+    --Verde: #39b54a;
+    --Gris-oscuro2: rgb(143, 143, 143);
+}
+/*HEADER-------------------------------------------------------------------------------------------*/
+
+header{
+    background-color: var(--Amarillo);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.top-header{
+    width: 100%;
+    max-width: 1100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.logo2{
+    display: none;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+.logo img{
+    height: 50px;
+    width: 70px;
+}
+.form input{
+    padding: 5px;
+    height: 40px;
+    width: 90%;
+    background-color: white;
+    color: var(--Gris-oscuro);
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+}
+.form{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 75%;
+    margin-left: 4px;
+}
+.submit-search{
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: white;
+    color: var(--Gris-oscuro);
+    border-radius: 0px 10px 10px 0px;
+}
+.fas{
+    margin: 10px 0px;
+}
+body header nav{
+    display: none;
+}
+body header nav ul, li a {
+    color: black;
+    text-decoration: none;
+    list-style: none;
+}
+/*BURGER-MENU-----------------------------------------------------------------------------------------------*/
+.burger-menu{
+    border-color: rgb(141, 141, 141);
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 20px;
+    background-color: var(--Celeste);
+    color: white;
+    margin-bottom: 10px;
+}
+.burger-menu-padre{
+    text-align: center;
+    width: 100%;
+}
+.banner img{
+    width: 100%;
+}
+/*BODY---------------------------------------------------------------------------*/
+body{
+    font-family: 'roboto', sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 700px;
+    background-color: var(--Gris-claro);
+    height: 600px;
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+body main div.login form input{
+    margin-bottom: 20px;
+    height: 40px;
+    border: 2px solid var(--Celeste);
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+}
+body main form input.enviarlogin{
+    border:none;
+    background-color: var(--Celeste);
+    color: white;
+    font-weight: bold;
+    transition: 0.6s;
+}
+.login h2{
+    font-weight: normal;
+}
+/*FOOTER----------------------------------------------------------------------------------------------------------------------*/
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+.footer i{
+    color: var(--Celeste);
+    margin: 10px 0px;
+    font-size: 25px; 
+    transition: color 1s, font-size 0.3s;
+}
+.footer h3{
+    font-size: 15px;
+}
+.footer p{
+    color: rgb(148, 148, 148);
+    font-size: 11px;
+}
+.footer article{
+    width: 200px;
+}
+.copy{
+    background-color: white;
+    padding: 10px;
+    color: rgb(148, 148, 148);
+}
+.footer div:hover i{
+    color: var(--Azul);
+    font-size: 30px;
+}
+/*ANIMATIONS*/
+.footer div:hover i{
+    color: var(--Azul);
+    font-size: 30px;
+}
+.enviarlogin:hover{
+    box-shadow: inset 0px 0px 14px 8px rgba(0,0,0,0.31);
+} 
+/*Querys----------------------------------------------------------------------------------------------------------------------*/
+@media (min-width: 361px){
+    .copy{
+        font-size: 12px;
+    }
+
+}
+@media (min-width:600px) {
+    .logo1{
+        display: none;
+    }
+    .logo2{
+        display: flex;
+    }
+    .logo2 img{
+        width: 100%;
+    }
+}
+@media (min-width: 750px){
+    .logo{
+        max-width: 250px;
+    }
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .footer article{
+        width: 300px;
+    }
+    .submit{
+        width: 30%;
+    }
+    .input input{
+        width: 100%;
+    }
+    .input{
+        width: 70%;
+    }
+    .form{
+        width: 30%;
+    }
+    .burger-menu-padre{
+        display: none;
+    }
+    body header nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 1100px;
+    }
+    body header nav ul li{
+        display: inline;
+    }
+    body header nav ul li a{
+        margin: 0px 10px;
+        font-size: 15px;
+        color: rgb(71, 71, 71);
+    }
+    body header nav ul li a:hover{
+        color: black;
+    }
+    .form{
+        width: 35%;
+    }
+    .top-header{
+        justify-content: space-between;
+    }
+
+}
