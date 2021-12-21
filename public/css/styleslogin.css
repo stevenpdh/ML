@@ -117,7 +117,7 @@ main{
     width: 90%;
     max-width: 700px;
     background-color: var(--Gris-claro);
-    height: 600px;
+    height: 900px;
 }
 .login form{
     display: flex;
